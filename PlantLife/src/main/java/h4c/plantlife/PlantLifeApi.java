@@ -32,6 +32,7 @@ import h4c.plantlife.model.User;
 import h4c.plantlife.model.UserRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
 @Api
 @RestController
@@ -48,6 +49,13 @@ public class PlantLifeApi {
 	@Autowired
 	TreeImageRepository treeImageRepository;
 
+	@ApiOperation("Save user.")
+	@GetMapping("/user-register")
+	public User registerUser(@RequestBody User user) {
+		userRepository.save(user);
+		return user;
+	}
+
 	@ApiOperation("User profile.")
 	@GetMapping("/profile/{identityAddress}")
 	public User userProfile(@PathVariable String identityAddress) {
@@ -61,13 +69,6 @@ public class PlantLifeApi {
 		User user = userRepository.findOne(identityAddress);
 		return user.countTrees();
 	}
-
-	// @ApiOperation("QR Code Reader")
-	// @PostMapping("/qrcode-reader")
-	// public String qrCodeReader(@RequestParam("file") MultipartFile file) {
-	// // TODO Its mocked
-	// return UUID.randomUUID().toString();
-	// }
 
 	@ApiOperation("Lat/Lng to What3Words conversion")
 	@GetMapping("/what3words")
@@ -90,9 +91,11 @@ public class PlantLifeApi {
 	@PostMapping("/tree-image/{treeId}")
 	public String saveImage(//
 			@PathVariable("treeId") String treeId, //
+			@ApiParam("User that took the picture") @PathVariable("userId") String userId, //
 			@RequestParam("file") MultipartFile file) throws FileNotFoundException, IOException {
 		TreeImage image = new TreeImage();
 		image.setTreeId(treeId);
+		image.setUserId(userId);
 		String uuid = UUID.randomUUID().toString();
 		image.setImageName(uuid + file.getName());
 
@@ -120,7 +123,7 @@ public class PlantLifeApi {
 
 	@ApiOperation("Get tree images names")
 	@GetMapping("/list-tree-images/{treeId}")
-	public List<String> saveImage(//
+	public List<String> imagesByTree(//
 			@PathVariable("treeId") String treeId) throws FileNotFoundException, IOException {
 		List<TreeImage> treeImages = treeImageRepository.findByTreeId(treeId);
 		List<String> images = new ArrayList<>();

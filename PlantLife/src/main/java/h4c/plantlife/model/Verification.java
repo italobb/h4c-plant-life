@@ -12,21 +12,16 @@ public class Verification {
 	@Id
 	String uuid;
 
-	@ManyToOne
-	Tree tree;
+	@ManyToOne(optional = false)
+	User responsible;
+
+	private String treeId;
 
 	Date creationDate;
 
-	@OneToOne
+	@OneToOne(optional = false)
 	TreeImage image;
 
-	public Tree getTree() {
-		return tree;
-	}
-
-	public void setTree(Tree tree) {
-		this.tree = tree;
-	}
 
 	public Date getCreationDate() {
 		return creationDate;
@@ -42,5 +37,13 @@ public class Verification {
 
 	public void setImage(TreeImage image) {
 		this.image = image;
+	}
+
+	public String getTreeId() {
+		return treeId;
+	}
+
+	public void setTreeId(String treeId) {
+		this.treeId = treeId;
 	}
 }

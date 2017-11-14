@@ -11,6 +11,8 @@ public class TreeImage {
 	@Id
 	String imageName;
 
+	private String userId;
+
 	String treeId;
 
 	private Date creationDate;
@@ -42,5 +44,13 @@ public class TreeImage {
 
 	public void setCreationDate(Date creationDate) {
 		this.creationDate = creationDate;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 }

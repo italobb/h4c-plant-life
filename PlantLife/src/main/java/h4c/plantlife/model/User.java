@@ -3,6 +3,7 @@ package h4c.plantlife.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -15,6 +16,7 @@ public class User {
 	@Id
 	String identityAddress;
 
+	@Column(nullable = false)
 	String name;
 
 	Double reputation;
