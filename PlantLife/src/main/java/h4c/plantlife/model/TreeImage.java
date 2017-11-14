@@ -9,15 +9,11 @@ import javax.persistence.PrePersist;
 @Entity
 public class TreeImage {
 	@Id
-	String imageName;
+	private String imageName;
 
-<<<<<<< HEAD
 	private String userId;
-=======
-	String userId;
->>>>>>> ae953737a435a9b1c7b3282e900241912a7ed4b5
 
-	String treeId;
+	private String treeId;
 
 	private Date creationDate;
 

@@ -10,23 +10,17 @@ import javax.persistence.OneToOne;
 @Entity
 public class Verification {
 	@Id
-	String uuid;
+	private String uuid;
 
 	@ManyToOne(optional = false)
-	User responsible;
+	private User responsible;
 
-<<<<<<< HEAD
 	private String treeId;
-=======
-	@ManyToOne(optional = false)
-	Tree tree;
->>>>>>> ae953737a435a9b1c7b3282e900241912a7ed4b5
 
-	Date creationDate;
+	private Date creationDate;
 
 	@OneToOne(optional = false)
 	TreeImage image;
-
 
 	public Date getCreationDate() {
 		return creationDate;
