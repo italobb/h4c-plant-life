@@ -18,6 +18,7 @@ import org.springframework.core.io.InputStreamResource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -76,6 +77,13 @@ public class PlantLifeApi {
 		} catch (Exception e) {
 			return Arrays.asList("what", "three", "words");
 		}
+	}
+
+	@ApiOperation("Creates a tree")
+	@PostMapping("/tree-create")
+	public Tree create(@RequestBody Tree tree) {
+		treeRepository.save(tree);
+		return tree;
 	}
 
 	@ApiOperation("Save tree image and returns the image path")
