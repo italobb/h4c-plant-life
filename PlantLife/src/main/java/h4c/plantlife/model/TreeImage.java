@@ -11,7 +11,11 @@ public class TreeImage {
 	@Id
 	String imageName;
 
+<<<<<<< HEAD
 	private String userId;
+=======
+	String userId;
+>>>>>>> ae953737a435a9b1c7b3282e900241912a7ed4b5
 
 	String treeId;
 

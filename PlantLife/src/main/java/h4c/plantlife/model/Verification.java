@@ -15,7 +15,12 @@ public class Verification {
 	@ManyToOne(optional = false)
 	User responsible;
 
+<<<<<<< HEAD
 	private String treeId;
+=======
+	@ManyToOne(optional = false)
+	Tree tree;
+>>>>>>> ae953737a435a9b1c7b3282e900241912a7ed4b5
 
 	Date creationDate;
 
