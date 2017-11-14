@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -51,7 +52,16 @@ public class PlantLifeApi {
 
 	@ApiOperation("Save user.")
 	@PostMapping("/user-register")
+<<<<<<< HEAD
+	public User registerUser(@RequestParam String name, @RequestParam String identityAddress) {
+		User user = new User();
+		user.setCreationDate(new Date());
+		user.setName(name);
+		user.setIdentityAddress(identityAddress);
+		user.setReputation(1.0);
+=======
 	public User registerUser(@RequestBody User user) {
+>>>>>>> d9ebed8bd8ee171b727f5a64bc3155cb1cd4c4a7
 		userRepository.save(user);
 		return user;
 	}
