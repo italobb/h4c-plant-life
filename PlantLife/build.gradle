@@ -29,7 +29,7 @@ dependencies {
     compile 'io.springfox:springfox-swagger-ui:2.6.1'
     compile 'commons-io:commons-io:2.4'
     compile 'mysql:mysql-connector-java'
-    compile 'com.google.zxing:core:2.0'
+    //compile 'com.google.zxing:core:2.0'
     
 
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')

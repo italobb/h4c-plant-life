@@ -62,12 +62,12 @@ public class PlantLifeApi {
 		return user.countTrees();
 	}
 
-	@ApiOperation("QR Code Reader")
-	@PostMapping("/qrcode-reader")
-	public String qrCodeReader(@RequestParam("file") MultipartFile file) {
-		// TODO Its mocked
-		return UUID.randomUUID().toString();
-	}
+	// @ApiOperation("QR Code Reader")
+	// @PostMapping("/qrcode-reader")
+	// public String qrCodeReader(@RequestParam("file") MultipartFile file) {
+	// // TODO Its mocked
+	// return UUID.randomUUID().toString();
+	// }
 
 	@ApiOperation("Lat/Lng to What3Words conversion")
 	@GetMapping("/what3words")
