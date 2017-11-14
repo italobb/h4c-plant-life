@@ -19,6 +19,12 @@ public class User {
 	@Column(nullable = false)
 	String name;
 
+	String avatar;
+
+	String phone;
+
+	String photo;
+
 	Double reputation;
 
 	Date creationDate;
@@ -74,6 +80,30 @@ public class User {
 
 	public void setReputation(Double reputation) {
 		this.reputation = reputation;
+	}
+
+	public String getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 
 }
