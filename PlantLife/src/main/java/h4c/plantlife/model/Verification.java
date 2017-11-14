@@ -12,12 +12,15 @@ public class Verification {
 	@Id
 	String uuid;
 
-	@ManyToOne
+	@ManyToOne(optional = false)
+	User responsible;
+
+	@ManyToOne(optional = false)
 	Tree tree;
 
 	Date creationDate;
 
-	@OneToOne
+	@OneToOne(optional = false)
 	TreeImage image;
 
 	public Tree getTree() {

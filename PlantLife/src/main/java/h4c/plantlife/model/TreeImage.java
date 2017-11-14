@@ -11,6 +11,8 @@ public class TreeImage {
 	@Id
 	String imageName;
 
+	String userId;
+
 	String treeId;
 
 	private Date creationDate;
