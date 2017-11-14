@@ -10,17 +10,17 @@ import javax.persistence.OneToMany;
 @Entity
 public class Tree {
 	@Id
-	String uuid;
+	private String uuid;
 
 	@ManyToOne(optional = false)
-	User owner;
+	private User owner;
 
-	Double lat;
-	Double lng;
+	private Double lat;
+	private Double lng;
 
-	String word1;
-	String word2;
-	String word3;
+	private String word1;
+	private String word2;
+	private String word3;
 
 	@OneToMany(mappedBy = "treeId")
 	List<Verification> verifications;
@@ -90,5 +90,13 @@ public class Tree {
 
 	public void setImages(List<TreeImage> images) {
 		this.images = images;
+	}
+
+	public User getOwner() {
+		return owner;
+	}
+
+	public void setOwner(User owner) {
+		this.owner = owner;
 	}
 }

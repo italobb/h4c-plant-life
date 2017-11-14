@@ -50,14 +50,14 @@ public class PlantLifeApi {
 	TreeImageRepository treeImageRepository;
 
 	@ApiOperation("Save user.")
-	@GetMapping("/user-register")
+	@PostMapping("/user-register")
 	public User registerUser(@RequestBody User user) {
 		userRepository.save(user);
 		return user;
 	}
 
 	@ApiOperation("User profile.")
-	@GetMapping("/profile/{identityAddress}")
+	@GetMapping("/user-profile/{identityAddress}")
 	public User userProfile(@PathVariable String identityAddress) {
 		User user = userRepository.findOne(identityAddress);
 		return user;
