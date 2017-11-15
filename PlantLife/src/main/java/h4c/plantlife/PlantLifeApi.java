@@ -34,10 +34,9 @@ import h4c.plantlife.model.User;
 import h4c.plantlife.model.UserRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 
 @Api
-@CrossOrigin
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("plant-life")
 public class PlantLifeApi {
