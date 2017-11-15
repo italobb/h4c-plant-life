@@ -13,15 +13,16 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
       <script src="js/bootstrap.js"></script>
-
-
-	  <script src="js/instascan.min.js"></script>
-      <script src="js/web3j.js"></script>
-
    </head>
 
 <body>
 <div id="wrap">
+
+		<script type="text/javascript">
+			if (sessionStorage.getItem("identityAddress")) {
+				window.location.assign("home.html");
+			}
+		</script>
       
         <div class="container">
           <div class="loginBg">
