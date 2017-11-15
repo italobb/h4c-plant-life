@@ -34,10 +34,9 @@ import h4c.plantlife.model.User;
 import h4c.plantlife.model.UserRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 
 @Api
-@CrossOrigin
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("plant-life")
 public class PlantLifeApi {
@@ -96,10 +95,10 @@ public class PlantLifeApi {
 	}
 
 	@ApiOperation("Save tree image and returns the image path")
-	@PostMapping("/tree-image/{treeId}")
+	@PostMapping("/tree-image/{userId}/{treeId}")
 	public String saveImage(//
 			@PathVariable("treeId") String treeId, //
-			@ApiParam("User that took the picture") @PathVariable("userId") String userId, //
+			@PathVariable("userId") String userId, //
 			@RequestParam("file") MultipartFile file) throws FileNotFoundException, IOException {
 		TreeImage image = new TreeImage();
 		image.setTreeId(treeId);
