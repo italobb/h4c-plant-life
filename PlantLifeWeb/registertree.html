@@ -103,7 +103,7 @@ $('.camBtn').click(function() {
   $('#takePicture').on('change', function() { 
      $.ajax({
               method: "POST",
-              url : "https://f496eeca.ngrok.io/plant-life/" + encodeURIComponent(identityAddress) + "/" + encodeURIComponent($("#treeId").val()),
+              url : "https://f496eeca.ngrok.io/plant-life/tree-image/" + encodeURIComponent(identityAddress) + "/" + encodeURIComponent($("#treeId").val()),
               data: new FormData($('form')[0]),
               processData: false, 
               contentType: false, 
