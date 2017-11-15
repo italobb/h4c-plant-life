@@ -51,10 +51,13 @@ function myMap() {
     center: myCenter , zoom: 17
   };
   var map = new google.maps.Map(mapCanvas, mapOptions);
-  var marker = new google.maps.Marker({
-    position: myCenter,
-    animation: google.maps.Animation.BOUNCE
-  });
+
+  var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+var marker = new google.maps.Marker({
+  position: myCenter,
+  icon: image
+});
+
   marker.setMap(map);
 
 }
@@ -75,10 +78,12 @@ function myMap() {
     center: myCenter , zoom: 14
   };
   var map = new google.maps.Map(mapCanvas, mapOptions);
-  var marker = new google.maps.Marker({
-    position: myCenter,
-    animation: google.maps.Animation.BOUNCE
-  });
+  var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/tree.png';
+  image = 'http://maps.google.com/mapfiles/kml/pal2/icon4.png';
+var marker = new google.maps.Marker({
+  position: myCenter,
+  icon: image
+});
   marker.setMap(map);
 
 }
