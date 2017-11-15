@@ -1,0 +1,123 @@
+body{font-family: 'RL';}
+:root {
+	--bg: #54A98D;
+}
+.container{padding: 0px;}
+.posRel{position: relative !important;}
+@font-face {
+  font-family: 'RL';
+  font-weight: normal;
+  src: url(../font/Roboto-Light.ttf);
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RB';
+  font-weight: normal;
+  src: url(../font/Roboto-Bold.ttf);
+  font-style: normal;
+}
+.navbar-toggle .icon-bar {
+    background-color: #000000;
+}
+.navButton {
+	border-radius: 0;
+	background-color: transparent;
+	margin-top: 41px;
+	margin-right: 0;
+	float: left !important;
+}
+.loginBg{background-color:var(--bg);height: 100vh;display: flex;justify-content: center;position: relative;}
+.loginRect{width: 68%;background-color: #47A183;position: absolute; bottom:0;margin-left: auto;margin-right: auto;height: 90%;left: 15%;border-top-left-radius: 200px;border-top-right-radius: 200px;}
+.loginImg {width: 100%;margin-top: -50%;}
+.oo1{width: 100%;}
+#circle {
+	width: 100%;
+	height: 0px;
+	padding-top: 100%;
+	background: #ffffff;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100px;
+	border-radius: 100%;
+}
+.navLog{position: absolute;bottom:100px;width: 50% !important;left: 25%;}
+.HC{display: none !important;}
+.myCenter{width: 100%;display: block;}
+body {
+	background: none;
+	overflow-x: hidden;
+}
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+img {
+	max-width: 100%;
+}
+a:hover {
+	text-decoration: none;
+}
+.nopadding {
+   padding: 0 !important;
+}
+.centerStuff{display: flex;justify-content: center;}
+.logTxt{text-transform: uppercase;text-align: center;color: #ffffff;font-size:22px;font-weight: bold;margin-top: 100px;}
+.logBtn{background-color: #5F32B8;border:none;border-radius: 50px;padding: 20px 5px;margin-top: 20px;}
+.logoUImg {width: 60%;}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidenava {
+    padding: 18px 8px 18px 32px;
+    text-decoration: none;
+    font-size: 21px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: 'RB';
+}
+.sidenava:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.registerBg{background-color:#FAE4DA;height: 100vh;position: relative;width: 100%;}
+.collMenu {margin-left:20px;}
+.menuArea{margin-top:20px;}
+.regBtn{background-color: #65B74E;color: #ffffff; border:none;border-radius: 50px;padding: 20px 5px;margin-top: 20px;width: 125px;text-transform: uppercase;font-weight: bold;}
+.listBtn{background-color: #65B74E;color: #ffffff; border:none;border-radius: 50px;padding: 20px 5px;margin-top: 20px;width: 125px;text-transform: uppercase;font-weight: bold;}
+.bx-wrapper{background:none !important;border:none !important;}
+.bxslider img{margin:auto;}
+.bx-wrapper{margin-bottom: 130px !important;}
+.wTxt {font-size: 20px;color: #000000;margin-left:40px;margin-top: 90px;margin-bottom:30px;font-weight: bold;}
+.regBg {background-color:#65B74E;height: 100vh;position: relative;width: 100%;}
+.camBtn{background-color: #FAE4DA;color: #ffffff; border:none;border-radius: 50px;padding: 10px 50px;margin-left: 15%; margin-top: 20px;width: 70%;text-transform: uppercase;font-weight: bold;}
+.form-control {width: 70%;margin-left: 15%;height: 50px;border-radius: 50px;}
+.lblClass {width: 70%;margin-left: 15%;border-radius: 50px;color: #ffffff;}
+.form-group{margin-top: 70px;}
+.treelistBg{background-color:#FAE4DA;height: 100vh;position: relative;width: 100%;}
+.treeListList {border-bottom: 1px solid #ffffff;height: 50px;}
+.treeListList .col-md-6, .treeListList .col-md-3 {margin-top: 10px;}
+.treeListTop{height: 50px;}
+.treeListTop {font-size: 30px;font-weight: bold;color: #000000;margin-top: 10px;}
+
+#map {height: 100vh;}
+.othermenuArea{padding-top:10px;padding-bottom: 10px; background-color: #54A98D;}
