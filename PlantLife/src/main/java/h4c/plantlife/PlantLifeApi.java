@@ -96,10 +96,10 @@ public class PlantLifeApi {
 	}
 
 	@ApiOperation("Save tree image and returns the image path")
-	@PostMapping("/tree-image/{treeId}")
+	@PostMapping("/tree-image/{userId}/{treeId}")
 	public String saveImage(//
 			@PathVariable("treeId") String treeId, //
-			@ApiParam("User that took the picture") @PathVariable("userId") String userId, //
+			@PathVariable("userId") String userId, //
 			@RequestParam("file") MultipartFile file) throws FileNotFoundException, IOException {
 		TreeImage image = new TreeImage();
 		image.setTreeId(treeId);
