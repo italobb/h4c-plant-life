@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"> 
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>PlantLife</title>
+
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/jquery.bxslider.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+      <script src="js/jquery.bxslider.js"></script>
+      <script src="js/bootstrap.js"></script>
+
+   </head>
+
+<body>
+<div id="wrap">
+<nav id="top" class="navbar navbar-fixed-top">
+   <div class="othermenuArea">
+      <div class="container" style="position: relative;">
+
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="sidenava" href="home.html">Home</a>
+            <a class="sidenava" href="#">Verify Tree</a>
+            <a class="sidenava" href="profile.html">Profile</a>
+            <a class="sidenava" href="listtree.html">Tree List</a>
+            <a class="sidenava" href="map.html">Map</a>
+            <a style="margin-top: 120px;" class="sidenava" href="#">About</a>
+          </div>
+          <span class="collMenu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+          <a href="map.html"><span style="color: #000000;float: right;font-size: 40px;margin-right: 20px;" class="fa">&#xf0ac;</span></a>
+                   </div>
+            </div>
+         </div>
+</nav>
+
+
+        <div class="container">
+          <div id="map"></div>
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(5.804340, -55.196950)
+  var mapOptions = {
+    center: myCenter , zoom: 17
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+
+}
+</script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKxGMib9CJjuHTgMqMYXhTeIyOiZywYqI&callback=myMap">
+    </script>
+
+
+
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(51.433546, 7.6616900)
+  var mapOptions = {
+    center: myCenter , zoom: 14
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({
+    position: myCenter,
+    animation: google.maps.Animation.BOUNCE
+  });
+  marker.setMap(map);
+
+}
+</script>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "85%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+</script>
+</div>
+</body>
