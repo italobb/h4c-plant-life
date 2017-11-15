@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,6 +37,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
 @Api
+@CrossOrigin
 @RestController
 @RequestMapping("plant-life")
 public class PlantLifeApi {
@@ -52,16 +54,12 @@ public class PlantLifeApi {
 
 	@ApiOperation("Save user.")
 	@PostMapping("/user-register")
-<<<<<<< HEAD
 	public User registerUser(@RequestParam String name, @RequestParam String identityAddress) {
 		User user = new User();
 		user.setCreationDate(new Date());
 		user.setName(name);
 		user.setIdentityAddress(identityAddress);
 		user.setReputation(1.0);
-=======
-	public User registerUser(@RequestBody User user) {
->>>>>>> d9ebed8bd8ee171b727f5a64bc3155cb1cd4c4a7
 		userRepository.save(user);
 		return user;
 	}

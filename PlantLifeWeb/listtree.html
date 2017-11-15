@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"> 
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>PlantLife</title>
+
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/jquery.bxslider.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+      <script src="js/jquery.bxslider.js"></script>
+      <script src="js/bootstrap.js"></script>
+
+   </head>
+
+<body>
+<div id="wrap">
+<nav id="top" class="navbar navbar-fixed-top">
+   <div class="menuArea">
+      <div class="container" style="position: relative;">
+
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a class="sidenava" href="home.html">Home</a>
+            <a class="sidenava" href="#">Verify Tree</a>
+            <a class="sidenava" href="profile.html">Profile</a>
+            <a class="sidenava" href="listtree.html">Tree List</a>
+            <a class="sidenava" href="map.html">Map</a>
+            <a style="margin-top: 120px;" class="sidenava" href="#">About</a>
+          </div>
+          <span class="collMenu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+          <a href="map.html"><span style="color: #000000;float: right;font-size: 40px;margin-right: 20px;" class="fa">&#xf0ac;</span></a>
+                   </div>
+            </div>
+         </div>
+</nav>
+
+
+        <div class="container">
+          <div class="treelistBg">
+            <img style="position: absolute;bottom:0;" src="img/BGimage.png"/>
+              <div class="nopadding col-md-12 col-sm-12 col-xs-12">
+                <ul style="margin-top: 85px;">
+                  <li class="treeListTop">
+                    <div class="col-md-6 col-sm-6 col-xs-6">Tree</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">Age</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">Value</div>
+                  </li>
+                  <li class="treeListList">
+                    <div class="col-md-6 col-sm-6 col-xs-6">2141ab49597abcdefgh</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">35 days</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">12 CC</div>
+                  </li>
+                  <li class="treeListList">
+                    <div class="col-md-6 col-sm-6 col-xs-6">2141ab49597abcdefgh</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">35 days</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">12 CC</div>
+                  </li>
+                  <li class="treeListList">
+                    <div class="col-md-6 col-sm-6 col-xs-6">2141ab49597abcdefgh</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">35 days</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">12 CC</div>
+                  </li>
+                  <li class="treeListList">
+                    <div class="col-md-6 col-sm-6 col-xs-6">2141ab49597abcdefgh</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">35 days</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">12 CC</div>
+                  </li>
+                  <li class="treeListList">
+                    <div class="col-md-6 col-sm-6 col-xs-6">2141ab49597abcdefgh</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">35 days</div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">12 CC</div>
+                  </li>
+                </ul>
+              </div>
+            
+          </div>
+        </div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "85%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+</script>
+</div>
+</body>

@@ -113,3 +113,8 @@ a:hover {
 .form-control {width: 70%;margin-left: 15%;height: 50px;border-radius: 50px;}
 .lblClass {width: 70%;margin-left: 15%;border-radius: 50px;color: #ffffff;}
 .form-group{margin-top: 70px;}
+.treelistBg{background-color:#FAE4DA;height: 100vh;position: relative;width: 100%;}
+.treeListList {border-bottom: 1px solid #ffffff;height: 50px;}
+.treeListList .col-md-6, .treeListList .col-md-3 {margin-top: 10px;}
+.treeListTop{height: 50px;}
+.treeListTop {font-size: 30px;font-weight: bold;color: #000000;margin-top: 10px;}
