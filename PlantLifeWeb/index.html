@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8"> 
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>PlantLife</title>
+
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+      <script src="js/bootstrap.js"></script>
+   </head>
+
+<body>
+<div id="wrap">
+
+		<script type="text/javascript">
+			if (sessionStorage.getItem("identityAddress")) {
+				window.location.assign("home.html");
+			}
+		</script>
+      
+        <div class="container">
+          <div class="loginBg">
+            <div class="loginRect">
+              <div class="nopadding centerStuff col-md-12"><div id="circle"></div></div>
+              <div class="centerStuff col-md-12">
+                 <h1 class="logTxt">login with</h1>
+              </div>
+              <div class="nopadding centerStuff col-md-12">
+                 <a href="qrcode.html?variable=identityAddress"><button class="logBtn"><img class="logoUImg" src="img/logoUport.png"/></button></a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+
+
+</body>
