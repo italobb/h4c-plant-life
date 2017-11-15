@@ -118,3 +118,6 @@ a:hover {
 .treeListList .col-md-6, .treeListList .col-md-3 {margin-top: 10px;}
 .treeListTop{height: 50px;}
 .treeListTop {font-size: 30px;font-weight: bold;color: #000000;margin-top: 10px;}
+
+#map {height: 100vh;}
+.othermenuArea{padding-top:10px;padding-bottom: 10px; background-color: #54A98D;}
