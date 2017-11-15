@@ -108,3 +108,8 @@ a:hover {
 .bxslider img{margin:auto;}
 .bx-wrapper{margin-bottom: 130px !important;}
 .wTxt {font-size: 20px;color: #000000;margin-left:40px;margin-top: 90px;margin-bottom:30px;font-weight: bold;}
+.regBg {background-color:#65B74E;height: 100vh;position: relative;width: 100%;}
+.camBtn{background-color: #FAE4DA;color: #ffffff; border:none;border-radius: 50px;padding: 10px 50px;margin-left: 15%; margin-top: 20px;width: 70%;text-transform: uppercase;font-weight: bold;}
+.form-control {width: 70%;margin-left: 15%;height: 50px;border-radius: 50px;}
+.lblClass {width: 70%;margin-left: 15%;border-radius: 50px;color: #ffffff;}
+.form-group{margin-top: 70px;}
