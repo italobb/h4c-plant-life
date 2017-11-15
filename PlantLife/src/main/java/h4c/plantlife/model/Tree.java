@@ -12,8 +12,8 @@ public class Tree {
 	@Id
 	private String uuid;
 
-	@ManyToOne(optional = false)
-	private User owner;
+	@ManyToOne(optional = false, targetEntity = User.class)
+	private String ownerId;
 
 	private Double lat;
 	private Double lng;
@@ -92,11 +92,12 @@ public class Tree {
 		this.images = images;
 	}
 
-	public User getOwner() {
-		return owner;
+	public String getOwnerId() {
+		return ownerId;
 	}
 
-	public void setOwner(User owner) {
-		this.owner = owner;
+	public void setOwnerId(String ownerId) {
+		this.ownerId = ownerId;
 	}
+
 }
