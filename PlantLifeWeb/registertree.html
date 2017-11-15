@@ -50,6 +50,16 @@
 
 </div>
     <script>
+
+    var identityAddress = sessionStorage.getItem('identityAddress');
+    if (!identityAddress) {
+        window.location.assign("index.html");      
+    }
+
+      var what3words;
+      var latitude;
+      var longitude;
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -60,9 +70,13 @@ function getLocation() {
 function showPosition(position) {
     document.getElementById("location").value = position.coords.latitude + " " + position.coords.longitude; 
     
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
+
     $.ajax({
-    url : "http://165.227.155.242:8080/plant-life/what3words?lat=" + position.coords.latitude + "&lng=" + position.coords.longitude,
+    url : "https://f496eeca.ngrok.io/plant-life/what3words?lat=" + latitude + "&lng=" + longitude,
     success : function(words){
+      what3words = words;
       //var words = $.parseJSON(result);
       $("#w3w").text(words[0] + ", " + words[1] + ", " + words[2]);
       $("#words").val(words[0] + ", " + words[1] + ", " + words[2]); 
@@ -79,17 +93,40 @@ if(sessionStorage.getItem("treeId")) {
 
 $('.camBtn').click(function() {
   $('#takePicture').click();
-  $('#takePicture').live('change', function(){ 
+  $('#takePicture').on('change', function() { 
      $.ajax({
               method: "POST",
-              url : "http://165.227.155.242:8080/plant-life/user-register?identityAddress=" + id + "&name=" +  id,
+              url : "https://f496eeca.ngrok.io/plant-life/" + encodeURIComponent(identityAddress) + "/" + encodeURIComponent(treeId),
+              data: new FormData($('#takePicture')[0]),
+              processData: false, 
+              contentType: false, 
               success : function(result) {
-                sessionStorage.removeItem("treeId");
-                window.location.assign("home.html");
+                  saveTree();                
               }
             });
   });
 });
+
+function saveTree() {
+    $.ajax({
+      url : "https://f496eeca.ngrok.io/plant-life/tree-create",
+      data : {
+        "lat": latitude,
+        "lng": longitude,
+        "ownerId": identityAddress,
+        "uuid": treeId,
+        "word1": what3words[0],
+        "word2": what3words[1],
+        "word3": what3words[2]
+      },
+      success : function(words){
+        sessionStorage.removeItem("treeId");
+        window.location.assign("home.html");
+      }
+    });
+
+}
+
 
 </script>
 </body>

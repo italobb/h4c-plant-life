@@ -23,7 +23,7 @@
         var id = encodeURIComponent(sessionStorage.getItem("identityAddress"));
         $.ajax({
           method: "POST",
-          url : "http://165.227.155.242:8080/plant-life/user-register?identityAddress=" + id + "&name=" +  id,
+          url : "https://f496eeca.ngrok.io/plant-life/user-register?identityAddress=" + id + "&name=" +  id,
           success : function(result) {
             window.location.assign("home.html");
           }
